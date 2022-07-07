@@ -14,7 +14,7 @@ class BookCategoryService
     {
     }
 
-    public function getRepositories(): BookCategoryListResponse
+    public function getCategories(): BookCategoryListResponse
     {
         $categories = $this->bookCategoryRepository->findBy([], ['title' => Criteria::ASC]);
 

@@ -16,6 +16,6 @@ class BookCategoryController extends AbstractController
     #[Route('/api/v1/book/categories')]
     public function categories(): Response
     {
-        return $this->json($this->bookCategoryService->getRepositories());
+        return $this->json($this->bookCategoryService->getCategories());
     }
 }
