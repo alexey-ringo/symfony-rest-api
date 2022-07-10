@@ -8,6 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Symfony\Component\Routing\Annotation\Route;
+use App\Model\BookListResponse;
 
 class BookController extends AbstractController
 {
@@ -15,6 +16,13 @@ class BookController extends AbstractController
     {
     }
 
+    /**
+     * @OA\Response(
+     *     response=200,
+     *     description="Returns book",
+     *     @Model(type=BookListResponse::class)
+     * )
+     */
     #[Route(path: '/api/v1/category/{id}/books')]
     public function booksByCategory(int $id): Response
     {
