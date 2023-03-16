@@ -19,11 +19,14 @@ class ErrorResponse
     }
 
     /**
-     * @OA\Property(type="object", oneOf={
-     *     @OA\Schema(ref=@Model(type=ErrorDebugDetails::class)),
-     *     @OA\Schema(ref=@Model(type=ErrorValidationDetails::class)),
-     * })
+     * @OA\Property(type="object")
      */
+//    /**
+//     * @OA\Property(type="object", oneOf={
+//     *     @OA\Schema(ref=@Model(type=ErrorDebugDetails::class)),
+//     *     @OA\Schema(ref=@Model(type=ErrorValidationDetails::class)),
+//     * })
+//     */
     public function getDetails(): mixed
     {
         return $this->details;
